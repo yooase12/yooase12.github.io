@@ -1,0 +1,15 @@
+---
+layout: post
+title: c#으로 Hello World를 출력해보자.
+date: 2020-09-03 22:20:23 +0900
+category: c#
+---
+# post-sample
+> Hello World!
+
+C와 C++과 다르게 header file을 include 하는게 아닌 
+```ruby
+using System;
+```
+으로 c++에서 using namespace std;와 똑같은 역할을 한다.
+
