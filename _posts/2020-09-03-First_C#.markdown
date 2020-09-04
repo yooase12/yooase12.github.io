@@ -15,7 +15,7 @@ using System;
 
 한번 C#으로 Hello World!를 출력하는 문제를 풀어보자.
 
-문제는 다음 링크에서 확인 가능합니다. [2557](https://www.acmicpc.net/problem/2557).
+문제는 다음 링크에서 확인 가능합니다. [https://www.acmicpc.net/problem/2557](https://www.acmicpc.net/problem/2557)
 
 풀이는 다음과 같다.
 ```ruby
@@ -38,12 +38,12 @@ namespace HelloWorld
 C#에서는 출력은 Console.WriteLine를 이용해서 사용하면 된다.
 
 ## 개행 문제
-이번에는 [10718](https://www.acmicpc.net/problem/10718). 문제를 확인해보자.
+이번에는 [https://www.acmicpc.net/problem/10718](https://www.acmicpc.net/problem/10718) 문제를 확인해보자.
 
 여기서는 "강한육군 대한육군"을 총 2번 출력하는 것인데, 위와 다르게 각각 한줄씩 출력을 해야한다.
 즉 개행을 쓸줄 알아야 풀수있는 문제이다.
 
-<p><b>추신으로 현재 C#으로는 못 푸는 버그가 있는것 같습니다. [ideone]( https://ideone.com/). 에서 실습하면 될 꺼 같다</b></p>
+<p><b>추신으로 현재 C#으로는 못 푸는 버그가 있는것 같습니다. [https://ideone.com](https://ideone.com) 에서 실습하면 될 꺼 같다</b></p>
 
 그러면 개행은 어떻게하면 될까?
 
