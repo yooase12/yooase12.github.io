@@ -1,0 +1,72 @@
+---
+layout: post
+title: c#으로 입력을 받아보자!
+date: 2020-09-04 13:56:23 +0900
+category: c#
+---
+
+# 문자을 입력받아보자
+>  Console.ReadLine();
+
+이번 문제는 숫자를 받아 합을 출력하는 문제이다. [https://www.acmicpc.net/problem/1330](https://www.acmicpc.net/problem/1330)
+
+C++같은 경우에는 sin >> a >> b 하면 2개를 받을 수 있지만.
+C#에서는 저렇게 안되고 무조건 문자열만 받을 수 있는 것 같다.
+
+그래서 이 문제를 풀때는 문자열을 받아와서 공백으로 자른 후 정수로 저장하고 합을 출력하면 된다.
+```ruby
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class Test
+{
+	public static void Main()
+	{
+		string s = Console.ReadLine(); //문자열로 입력을 받음
+        var arr = s.Split(' '); //공백으로 자른 후 배열로 저장
+
+        int a = int.Parse(arr[0]);
+        int b = int.Parse(arr[1]);
+        
+        Console.WriteLine(a+b);
+	}
+}
+```
+
+이렇게 풀고 풀이를 보는 도중 pluvia님이 올리신 풀이를 보았는데 처음 보는 부분을 발견했다.
+```ruby
+string s = Console.ReadLine();
+var a = s.Split().Select(x => int.Parse(x));
+int i = a.Sum();
+```
+예를들어 입력이 "5 7"이면 s = "5 7"이 된다.
+그 다음에는 s에 있는 것이 Split()에 의해 문자열 배열이 되고, Select로 인해 각각의 값들이 정수로 바뀌게 된다.
+그리고 그 정보를 a에 저장을 한 다음 a의 총 합을 i에 저장한다.
+
+여기서 Select는 System.Linq에 있고, 왼쪽에 있는 값을 오른쪽으로 변경시킨다는 의미이다.
+
+그래서 위를 응용해봐서 한번 문제를 풀어보았다.
+
+```ruby
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class Test
+{
+    public static void Main()
+    {
+        var a = Console.ReadLine().Split().Select(x => int.Parse(x)).ToArray();
+
+        if(a[0] == a[1]) Console.WriteLine("==");
+        else if(a[0] > a[1]) Console.WriteLine(">");
+        else Console.WriteLine("<");
+    }
+}
+```
+간단하게 a에 값을 넣었다.
