@@ -4,12 +4,85 @@ title: c#으로 Hello World를 출력해보자.
 date: 2020-09-03 22:20:23 +0900
 category: c#
 ---
-# post-sample
+# 간단한 출력 문제
 > Hello World!
 
-C와 C++과 다르게 header file을 include 하는게 아닌 
+C와 C++과 다르게 header file을 include 하는것이 없다. 그 대신에
 ```ruby
 using System;
 ```
 으로 c++에서 using namespace std;와 똑같은 역할을 한다.
 
+한번 C#으로 Hello World!를 출력하는 문제를 풀어보자.
+
+문제는 다음 링크에서 확인 가능합니다. https://www.acmicpc.net/problem/2557
+
+풀이는 다음과 같다.
+```ruby
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+C#에서는 출력은 Console.WriteLine를 이용해서 사용하면 된다.
+
+## 개행 문제
+이번에는 https://www.acmicpc.net/problem/10718 문제를 확인해보자.
+
+여기서는 "강한육군 대한육군"을 총 2번 출력하는 것인데, 위와 다르게 각각 한줄씩 출력을 해야한다.
+즉 개행을 쓸줄 알아야 풀수있는 문제이다.
+<b>추신으로 현재 C#으로는 못 푸는 버그가 있는것 같습니다. https://ideone.com/ 에서 실습하면 될 꺼 같다</b> 
+
+그러면 개행은 어떻게하면 될까?
+
+풀이는 여러개가 있지만 2가지만 설명해 드리겠습니다.
+
+첫번째는 Environment.NewLine을 이용한 풀이다.
+```ruby
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            Console.WriteLine("강한친구 대한육군{0}강한친구 대한육군", Environment.NewLine);
+        }
+    }
+}
+```
+
+두번째는 \r\n을 이용한 방법이다.
+
+```ruby
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HelloWorld
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            Console.WriteLine("강한친구 대한육군\r\n강한친구 대한육군");
+        }
+    }
+}
+```
