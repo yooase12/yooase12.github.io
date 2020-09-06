@@ -2,7 +2,7 @@
 layout: post
 title: 프로그래머스 야근지수
 date: 2020-09-06 18:56:23 +0900
-category: c# List 정렬
+categories: c# List 정렬
 ---
 
 문제는 [https://programmers.co.kr/learn/courses/30/lessons/12927](https://programmers.co.kr/learn/courses/30/lessons/12927)에서 확인할 수 있습니다.
