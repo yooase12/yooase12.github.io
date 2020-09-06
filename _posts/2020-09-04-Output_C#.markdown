@@ -69,4 +69,4 @@ public class Test
     }
 }
 ```
-간단하게 a에 값을 넣었다.
+
