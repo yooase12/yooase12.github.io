@@ -18,7 +18,7 @@ C#의 List를 사용하는 방법이 있습니다.
 List를 선언하는 방식이다. T는 데이터 형식(타입)이 들어간다.
 
 문제에서는 int로 주어졌으니 
->List<int> 변수명 = new List(int)();
+>List<int> 변수명 = new List<int>();
 로 선언하면 된다.
 
 아니면 int를 List로 바꾸면 된다.
